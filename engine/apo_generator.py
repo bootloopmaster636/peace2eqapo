@@ -26,7 +26,7 @@ class ApoGenerator:
 
     def __generate_band_config(self, band: EqBand) -> str:
         try:
-            band_index = f"Filter {band.index}"
+            band_index = f"Filter {band.index}:"
             state = "ON" if band.enabled else "OFF"
             filter = band.filter.to_apo_filter()
             freq = f"Fc {band.frequency} Hz"

@@ -24,7 +24,7 @@ class PeaceParser:
 
             # Map list to schema
             result = []
-            for i in range(1, len(freq_list)):
+            for i in range(1, len(freq_list) + 1):
                 # Parse frequency, gain, and quality
                 freq = float(freq_list[f"frequency{i}"])
                 gain = float(gain_list[f"gain{i}"])
