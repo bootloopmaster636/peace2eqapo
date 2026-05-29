@@ -1,5 +1,7 @@
 import configparser
 
+from loguru import logger
+
 from schemas.filters import Filters
 from schemas.peq import EqBand, EqPreset
 
@@ -41,6 +43,9 @@ class PeaceParser:
                     else:
                         filter = Filters(int(filter_idx))
                 except ValueError:
+                    logger.warning(
+                        f"Invalid filter index {filter_idx} at band {i}. Using PEAK filter instead."
+                    )
                     filter = Filters.PEAK
                     enabled = False
 
@@ -59,4 +64,7 @@ class PeaceParser:
 
             return EqPreset(preamp_gain=preamp, band_list=result)
         except Exception as e:
+            logger.error(
+                "Looks like this is not a valid PEACE Equalizer file. Check and try again."
+            )
             raise e

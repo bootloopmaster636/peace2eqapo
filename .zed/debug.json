@@ -4,6 +4,6 @@
         "adapter": "Debugpy",
         "request": "launch",
         "program": "./main.py",
-        "args": ["./testfile.peace"],
+        "args": ["./testfile.peace", "./testfile.txt"],
     },
 ]
