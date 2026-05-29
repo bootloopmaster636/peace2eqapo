@@ -1,0 +1,9 @@
+[
+    {
+        "label": "Run main",
+        "adapter": "Debugpy",
+        "request": "launch",
+        "program": "./main.py",
+        "args": ["./testfile.peace"],
+    },
+]

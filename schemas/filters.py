@@ -1,0 +1,14 @@
+from enum import Enum
+
+
+class Filters(Enum):
+    PEAK = 0
+    LOW_PASS = 1
+    HIGH_PASS = 2
+    BAND_PASS = 3
+    LOW_SHELF = 4
+    HIGH_SHELF = 5
+    NOTCH = 6
+    ALL_PASS = 7
+    LOW_SHELF_Q_SLOPE = 14
+    HIGH_SHELF_Q_SLOPE = 15
