@@ -1,4 +1,5 @@
 import click
+from loguru import logger
 
 from engine import apo_generator, peace_parser
 
@@ -16,6 +17,8 @@ def main(input: str, output: str):
 
         with open(output, "w") as f:
             f.write("\n".join(eqapo_result))
+
+        logger.info(f"The result file has been written to {output}")
     except Exception as e:
         print(e)
 
